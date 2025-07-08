@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>STEPS FOR COOLING EQUIPMENT</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index_en.css') }}">
+</head>
+<body>
+  <div class="floating-element"></div>
+  <div class="floating-element"></div>
+  <div class="floating-element"></div>
+
+  <header id="mainHeader">
+    <nav>
+      <a href="{{ url_for('index', lang=lang) }}" class="logo">
+        <img src="{{ url_for('static', filename='images/logos/logo02-01.png') }}" alt="Steps For Cooling Equipment Logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('about', lang=lang) }}">About Us</a></li>
+        <li><a href="{{ url_for('services', lang=lang) }}">Services</a></li>
+        <li><a href="{{ url_for('products', lang=lang) }}">Products</a></li>
+        <li><a href="{{ url_for('media', lang=lang) }}">Partners</a></li>
+        <li><a href="{{ url_for('career', lang=lang) }}">Career</a></li>
+        <li><a href="{{ url_for('contact', lang=lang) }}">Contact Us</a></li>
+      </ul>
+      <div class="language-switcher">
+        <select id="langSelect" data-base-url="{{ url_for('switch_lang', lang='_LANG_') }}">
+          <option value="en" {% if lang == 'en' %}selected{% endif %}>English</option>
+          <option value="ar" {% if lang == 'ar' %}selected{% endif %}>العربية</option>
+        </select>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1 class="animate__animated animate__fadeIn">STEPS FOR COOLING EQUIPMENT & TRADE CO.</h1>
+    <div class="buttons">
+      <a href="{{ url_for('about', lang=lang) }}" class="btn animate__animated animate__fadeInUp"><i class="fas fa-info-circle"></i> About Us</a>
+      <a href="{{ url_for('services', lang=lang) }}" class="btn animate__animated animate__fadeInUp animate__delay-1s"><i class="fas fa-screwdriver-wrench"></i> Services</a>
+      <a href="{{ url_for('products', lang=lang) }}" class="btn animate__animated animate__fadeInUp animate__delay-2s"><i class="fas fa-box-archive"></i> Products</a>
+      <a href="{{ url_for('media', lang=lang) }}" class="btn animate__animated animate__fadeInUp animate__delay-3s"><i class="fas fa-handshake"></i> Partners</a>
+      <a href="{{ url_for('career', lang=lang) }}" class="btn animate__animated animate__fadeInUp animate__delay-4s"><i class="fas fa-briefcase"></i> Career</a>
+      <a href="{{ url_for('contact', lang=lang) }}" class="btn animate__animated animate__fadeInUp animate__delay-5s"><i class="fas fa-envelope"></i> Contact Us</a>
+    </div>
+  </section>
+
+  <section class="features-section">
+    <h2 class="section-title">Why Choose Us</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Quality Assurance</h3>
+        <p>We maintain the highest standards in cooling equipment and services, ensuring reliability and performance.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-clock"></i>
+        <h3>24/7 Support</h3>
+        <p>Our dedicated team is available round the clock to assist you with any cooling system needs.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-tools"></i>
+        <h3>Expert Installation</h3>
+        <p>Professional installation and maintenance services by certified technicians.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-section">
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="{{ url_for('static', filename='images/services/maintenance.jpg') }}" alt="Maintenance Service">
+        <h3>Maintenance</h3>
+        <p>Professional maintenance services for all types of cooling and refrigeration equipment.</p>
+      </div>
+      <div class="service-card">
+        <img src="{{ url_for('static', filename='images/services/transportation.jpg') }}" alt="Transportation Service">
+        <h3>Transportation</h3>
+        <p>Reliable transportation and delivery services for equipment.</p>
+      </div>
+      <div class="service-card">
+        <img src="{{ url_for('static', filename='images/services/refurbishment.jpg') }}" alt="Re-maintenance Service">
+        <h3>Refurbishment</h3>
+        <p>Complete refurbishment and restoration services for cooling equipment.</p>
+      </div>
+      <div class="service-card">
+        <img src="{{ url_for('static', filename='images/services/storage.jpg') }}" alt="Storage Service">
+        <h3>Storage</h3>
+        <p>Secure storage solutions for equipment in controlled environments.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-section">
+    <h2 class="section-title">Our Impact</h2>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <i class="fas fa-user-cog stat-tech"></i>
+        <div class="stat-number">150+</div>
+        <div class="stat-label">Expert Team Members</div>
+      </div>
+      <div class="stat-card">
+        <i class="fas fa-award stat-tech"></i>
+        <div class="stat-number">25+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-card">
+        <i class="fas fa-earth-americas rotating-globe"></i>
+        <div class="stat-label">Operating In</div>
+        <div class="countries-list">
+          Jordan • Saudi Arabia<br>UAE • Oman <br>Iraq•
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave-separator">
+    <div class="separator-content">
+      <div class="separator-icon">
+        <i class="fas fa-snowflake"></i>
+      </div>
+      <div class="separator-icon">
+        <i class="fas fa-fan"></i>
+      </div>
+      <div class="separator-icon">
+        <i class="fas fa-temperature-low"></i>
+      </div>
+    </div>
+  </div>
+
+  <section class="contact-section">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="contact-card">
+          <h3><i class="fas fa-fax"></i> Fax</h3>
+          <p>Send Us A Fax:</p>
+          <a href="tel:+962(6)4741402" class="phone-number">
+            <i class="fas fa-fax"></i>
+            +962 (6) 474 1402
+          </a>
+        </div>
+        <div class="contact-card">
+          <h3><i class="fas fa-phone-alt"></i> Tel</h3>
+          <p>Call Us Directly:</p>
+          <a href="tel:+962(6)4741440" class="phone-number">
+            <i class="fas fa-phone"></i>
+            +962 (6) 474 1440
+          </a>
+        </div>
+        <div class="contact-card">
+          <h3><i class="fas fa-envelope"></i> Email</h3>
+          <p>Send Us An Email:</p>
+          <a href="mailto:info@sgsintercool.com" class="phone-number">
+            <i class="fas fa-envelope"></i>
+            info@sgsintercool.com
+          </a>
+        </div>
+      </div>
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3384.2982257015584!2d35.8663393!3d31.9981457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca1dc57e8e9d7%3A0x51e33e82c487296e!2sKhalda%2C%20Amman!5e0!3m2!1sen!2sjo!4v1709655774961!5m2!1sen!2sjo"
+          allowfullscreen="" 
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <div class="address-bar">
+    <p><i class="fas fa-map-marker-alt"></i> Khalda, P.O. Box: 1051 Amman 11953 Jordan</p>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/index_en.js') }}"></script>
+
+</body>
+</html>

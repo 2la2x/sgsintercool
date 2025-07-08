@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ABOUT US - STEPS EQUIPMENT & REFRIGERATION</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about_en.css') }}">
+</head>
+<body>
+
+<div class="floating-element"></div>
+<div class="floating-element"></div>
+<div class="floating-element"></div>
+
+<header id="mainHeader">
+  <nav>
+    <a href="{{ url_for('index', lang='en') }}" class="logo">
+      <img src="{{ url_for('static', filename='images/logos/logo02-01.png') }}" alt="Steps Equipment & Refrigeration Logo" />
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="{{ url_for('about', lang=lang) }}" class="active">About Us</a></li>
+      <li><a href="{{ url_for('services', lang=lang) }}">Services</a></li>
+      <li><a href="{{ url_for('products', lang=lang) }}">Products</a></li>
+      <li><a href="{{ url_for('media', lang=lang) }}">Partners</a></li>
+      <li><a href="{{ url_for('career', lang=lang) }}">Career</a></li>
+      <li><a href="{{ url_for('contact', lang=lang) }}">Contact Us</a></li>
+    </ul>
+    
+    <div class="language-switcher">
+      <select id="langSelect" data-base-url="{{ url_for('switch_lang', lang='_LANG_') }}">
+        <option value="en" {% if lang == 'en' %}selected{% endif %}>English</option>
+        <option value="ar" {% if lang == 'ar' %}selected{% endif %}>العربية</option>
+      </select>
+    </div>
+  </nav>
+</header>
+
+<div class="about-container">
+  <div class="about-content animate__animated animate__fadeInUp">
+    <h1 class="section-title">ABOUT US</h1>
+    
+    <div class="about-text">
+      <ul>
+        <p>
+        STEPS FOR COOLING EQUIPMENT & TRADE CO. is a leading provider of commercial refrigeration and cooling solutions.
+        We pride ourselves on delivering high-quality products and services to a wide range of clients across various industries.
+        With years of experience and a dedication to innovation, our team ensures that every project is completed with precision and professionalism.
+        </p>
+      </ul>
+    </div>
+
+    <div class="info-section animate__animated animate__fadeInUp">
+      <h2 class="section-title">What We Do</h2>
+      
+      <div class="info-boxes">
+        <div class="info-box" style="animation-delay: 0.2s">
+          <i class="fas fa-bullseye"></i>
+          <h3>Our Mission</h3>
+          <ul>
+            <p>
+            Assets By Recording Their Details Using Proficient Forms Of Load Sheets
+            Storing Assets At Our Warehouse And According To Our Client's Standards.
+            Arranging Deployment Requests For Our Clients As Per Their Demands And Policies.
+            Managing Maintenance Requests On A Daily Basis To Serve Our Clients In The Shortest Time Depending On Their Requirements.
+            Providing Refurbishment Services For Used Equipment.
+            Provide Dismantling And Disposal Services For The Retired Equipment According To Our Client's Policies.
+            </p>
+            </ul>
+        
+        </div>
+        
+        <div class="info-box" style="animation-delay: 0.4s">
+          <i class="fas fa-eye"></i>
+          <h3>Our Vision</h3>
+          <p>To Nurture The Company's Human Resources As A Valuable Asset By 
+            Enriching Skills And Knowledge, Fostering Ethics And Team Building 
+            Which In Turn Leads To Our Client's Investment Benefits.
+            We Are Dedicated To Providing A Competitive Advantage Based On 
+            High Performance And Unique Value-Added Service To Maximize Our 
+            Customer's Selling Visibility.</p>
+        </div>
+      </div>
+    </div>  
+    
+    <div class="download-section animate__animated animate__fadeInUp">
+      <h2>Company Profile</h2>
+      <p>For More Detailed Information About Our Company, History, Capabilities, And Achievements, Please Download Our Full Company Profile Document.</p>
+      <a href="{{ url_for('static', filename='files/Company profile.pdf') }}" download class="download-btn">
+        <i class="fas fa-download"></i> Download Full Profile
+      </a>
+    </div>
+    
+    <div class="logos-section animate__animated animate__fadeInUp">
+      <h2 class="section-title">Sister Companies</h2>
+      <div class="logos-container">
+        <div class="top-logo main-logo">
+          <img src="{{ url_for('static', filename='images/logos/logo02-01.png') }}" alt="Main Company Logo" />
+        </div>
+        <div class="bottom-logos">
+          <div class="logo-box">
+            <img src="{{ url_for('static', filename='images/logos/darkline.png') }}" alt="Sister Company 1" />
+          </div>
+          <div class="logo-box">
+            <img src="{{ url_for('static', filename='images/logos/sgsintercool.png') }}" alt="Sister Company 2" />
+          </div>
+          <div class="logo-box">
+            <img src="{{ url_for('static', filename='images/logos/sdasdas-04.png') }}" alt="Sister Company 3" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<script src="{{ url_for('static', filename='js/about_en.js') }}"></script>
+
+
+</body>
+</html>

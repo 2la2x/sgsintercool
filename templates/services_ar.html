@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>خدمات - خطوات للمعدات والتجهيزات</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/services_ar.css') }}">
+</head>
+<body>
+
+<div class="floating-element"></div>
+<div class="floating-element"></div>
+<div class="floating-element"></div>
+
+<header id="mainHeader">
+  <nav>
+    <a href="{{ url_for('index', lang='ar') }}" class="logo">
+      <img src="{{ url_for('static', filename='images/logos/logo02-01.png') }}" alt="شعار خطوات لمعدات التبريد" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="{{ url_for('about', lang=lang) }}">من نحن</a></li>
+      <li><a href="{{ url_for('services', lang=lang) }}" class="active">الخدمات</a></li>
+      <li><a href="{{ url_for('products', lang=lang) }}">المنتجات</a></li>
+      <li><a href="{{ url_for('media', lang=lang) }}">الشركاء</a></li>
+      <li><a href="{{ url_for('career', lang=lang) }}">الوظائف</a></li>
+      <li><a href="{{ url_for('contact', lang=lang) }}">للتواصل</a></li>
+    </ul>
+
+    <div class="language-switcher">
+      <select id="langSelect" data-base-url="{{ url_for('switch_lang', lang='_LANG_') }}">
+        <option value="ar" {% if lang == 'ar' %}selected{% endif %}>العربية</option>
+        <option value="en" {% if lang == 'en' %}selected{% endif %}>English</option>
+      </select>
+    </div>
+  </nav>
+</header>
+
+<div class="services-container">
+  <div class="services-content animate__animated animate__fadeInUp">
+    <h1 class="section-title">خدماتنا</h1>
+    
+    <div class="intro-text">
+      <p>
+       تركيب احترافي , صيانة دورية , إصلاحات فورية , كادر فني معتمد. نوفر حلول تبريد شاملة بجودة لا تُضاهى وضمان على جميع الخدمات.
+        </p>
+    </div>
+
+    <div class="services-boxes">
+      <div class="service-box animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
+        <div class="service-image">
+          <img src="{{ url_for('static', filename='images/services/maintenance.jpg') }}" alt="خدمة الصيانة" loading="lazy">
+        </div>
+        <div class="service-content">
+          <h2>خدمات الصيانة الشاملة</h2>
+          <ul>
+            <li> صيانة فورية .</li>
+            <li> تقارير مفصلة .</li>
+            <li> ضمان على الإصلاحات.</li>
+            <li>   فريقنا الفني المؤهل جاهز لخدمتكم 24/7 بسرعة ودقة.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="service-box animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
+        <div class="service-image">
+          <img src="{{ url_for('static', filename='images/services/transportation.jpg') }}" alt="خدمة النقل" loading="lazy">
+        </div>
+        <div class="service-content">
+          <h2>خدمات النقل والتركيب المتكاملة </h2>
+          <ul>
+            <li>نقل آمن .</li>
+            <li> تركيب دقيق .</li>
+<li>تصميم مخصص  نوفر حلولاً متكاملة لنقل .</li>
+  <li>تركيب معدات التبريد بكفاءة واحترافية .</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="service-box animate__animated animate__fadeInUp" style="animation-delay: 0.6s">
+        <div class="service-image">
+          <img src="{{ url_for('static', filename='images/services/refurbishment.jpg') }}" alt="خدمة التجديد" loading="lazy">
+        </div>
+        <div class="service-content">
+          <h2>خدمات تجديد المبردات - صيانة شاملة وإعادة ترميم
+          </h2>
+          <ul>
+            <li> غسل المبردات من الداخل والخارج لإزالة الأتربة والشوائب.</li>
+            <li> طلاء الهيكل الخارجي بألوان عالية الجودة حسب التقييم الفني.</li>
+            <li> فحص أداء التبريد واستبدال الأجزاء المعيبة لضمان الكفاءة المثلى.</li>
+            <li> فحص الملحقات وتغيير القطع المكسورة أو التالفة.</li>
+            <li> تغليف المبردات لحمايتها أثناء النقل والتخزين.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="service-box animate__animated animate__fadeInUp" style="animation-delay: 0.8s">
+        <div class="service-image">
+          <img src="{{ url_for('static', filename='images/services/storage.jpg') }}" alt="خدمة التخزين" loading="lazy">
+        </div>
+        <div class="service-content">
+          <h2>خدمات التخزين واستيراد معدات التبريد</h2>
+          <ul>
+            <li> استيراد معدات تبريد عالية الكفاءة من كبرى العلامات التجارية العالمية.</li>
+            <li>نستورد معدات التبريد من مصنّعين عالميين موثوقين.</li>
+            <li>صُممت معداتنا وفقًا لأعلى معايير الصناعة، مما يضمن المتانة والموثوقية.</li>
+            <li>حلول تخزين آمنة . </li>
+            <li>منشآتنا مجهزة بأنظمة أمان ومراقبة متطورة لحماية استثماراتكم.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+
+  </div>
+</div>
+
+
+<script src="{{ url_for('static', filename='js/services_ar.js') }}"></script>
+
+</body>
+</html>

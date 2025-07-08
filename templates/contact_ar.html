@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>اتصل بنا - خطوات للمعدات والتبريد</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact_ar.css') }}">
+</head>
+<body>
+
+<div class="floating-element"></div>
+<div class="floating-element"></div>
+<div class="floating-element"></div>
+
+<header id="mainHeader">
+  <nav>
+    <a href="{{ url_for('index', lang='ar') }}" class="logo">
+      <img src="{{ url_for('static', filename='images/logos/Logo02-01.png') }}" alt="شعار خطوات لمعدات التبريد" />
+    </a>
+  
+    <ul class="nav-links">
+      <li><a href="{{ url_for('about', lang=lang) }}">من نحن</a></li>
+      <li><a href="{{ url_for('services', lang=lang) }}">الخدمات</a></li>
+      <li><a href="{{ url_for('products', lang=lang) }}">المنتجات</a></li>
+      <li><a href="{{ url_for('media', lang=lang) }}">الشركاء</a></li>
+      <li><a href="{{ url_for('career', lang=lang) }}">الوظائف</a></li>
+      <li><a href="{{ url_for('contact', lang=lang) }}" class="active">للتواصل</a></li>
+    </ul>
+    <div class="language-switcher">
+      <select id="langSelect" data-base-url="{{ url_for('switch_lang', lang='_LANG_') }}">
+        <option value="ar" {% if lang == 'ar' %}selected{% endif %}>العربية</option>
+        <option value="en" {% if lang == 'en' %}selected{% endif %}>English</option>
+      </select>
+    </div>
+  </nav>
+</header>
+
+<div class="contact-container">
+  <div class="contact-content animate__animated animate__fadeInUp">
+    <h1 class="section-title">اتصل بنا</h1>
+    
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fas fa-phone"></i>
+        </div>
+        <h3>هاتف</h3>
+        <div class="contact-info">
+          <p>متاح خلال ساعات العمل</p>
+          <a href="tel:+96264741440" class="contact-link">+962 6 474 1440</a>
+        </div>
+      </div>
+      
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fas fa-fax"></i>
+        </div>
+        <h3>فاكس</h3>
+        <div class="contact-info">
+          <p>أرسل لنا المستندات</p>
+          <span class="contact-link">+962 6 474 1402</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="email-social-row">
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h3>البريد الإلكتروني</h3>
+        <div class="contact-info">
+          <p>للاستفسارات عامة</p>
+          <a href="mailto:info@sgsintercool.com" class="contact-link">info@sgsintercool.com</a>
+        </div>
+      </div>
+      
+      <div class="contact-card social-media-card">
+        <div class="contact-icon">
+          <i class="fas fa-share-alt"></i>
+        </div>
+        <h3>وسائل التواصل الاجتماعي</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com/share/1Ad6L4hoL5/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="فيسبوك" class="facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/steps-for-cooling-equipment-trade-co/" target="_blank" rel="noopener noreferrer" aria-label="لينكد إن" class="linkedin">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.instagram.com/steps_scet?igsh=MXZoMnJscDN3bHY4aw" target="_blank" rel="noopener noreferrer" aria-label="إنستغرام" class="instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <h2 class="section-title">موقعنا</h2>
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3384.2982257015584!2d35.8663393!3d31.9981457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca1dc57e8e9d7%3A0x51e33e82c487296e!2sKhalda%2C%20Amman!5e0!3m2!1sen!2sjo!4v1709655774961!5m2!1sen!2sjo"
+        allowfullscreen="" 
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  
+
+<script src="{{ url_for('static', filename='js/contact_ar.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ألبومات المنتجات - معدات وتجهيزات ستيبس</title>
+  <meta name="description" content="استكشف مجموعة منتجاتنا من الثلاجات بما في ذلك ثلاجات الأبواب المفتوحة، ثلاجات الباب الواحد، ثلاجات البابين، المجمدات، والثلاجات الخاصة، وألبوم جديد.">
+  <meta name="keywords" content="منتجات التبريد، ثلاجات الأبواب المفتوحة، ثلاجات الباب الواحد، ثلاجات البابين، مجمدات، ثلاجات خاصة، معدات ستيبس، ألبوم جديد">
+  <meta property="og:title" content="ألبومات المنتجات - معدات وتجهيزات ستيبس">
+  <meta property="og:description" content="استكشف مجموعة منتجاتنا من الثلاجات بما في ذلك ثلاجات الأبواب المفتوحة، ثلاجات الباب الواحد، ثلاجات البابين، المجمدات، والثلاجات الخاصة، وألبوم جديد.">
+  <meta property="og:image" content="images/logos/steps-logo.png">
+  <meta property="og:url" content="https://yourwebsite.com/products_ar.html">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/products_ar.css') }}">
+</head>
+<body class="rtl">
+
+<div class="floating-element"></div>
+<div class="floating-element"></div>
+<div class="floating-element"></div>
+
+<header id="mainHeader">
+  <nav>
+    <a href="{{ url_for('index', lang='ar') }}" class="logo">
+      <img src="{{ url_for('static', filename='images/logos/Logo02-01.png') }}" alt="شعار معدات وتجهيزات ستيبس" loading="lazy" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="{{ url_for('about', lang=lang) }}">من نحن</a></li>
+      <li><a href="{{ url_for('services', lang=lang) }}">الخدمات</a></li>
+      <li><a href="{{ url_for('products', lang=lang) }}" class="active">المنتجات</a></li>
+      <li><a href="{{ url_for('media', lang=lang) }}">الشركاء</a></li>
+      <li><a href="{{ url_for('career', lang=lang) }}">الوظائف</a></li>
+      <li><a href="{{ url_for('contact', lang=lang) }}">للتواصل</a></li>
+    </ul>
+
+    <div class="language-switcher">
+      <select id="langSelect" data-base-url="{{ url_for('switch_lang', lang='_LANG_') }}">
+        <option value="ar" {% if lang == 'ar' %}selected{% endif %}>العربية</option>
+        <option value="en" {% if lang == 'en' %}selected{% endif %}>English</option>
+      </select>
+    </div>
+  </nav>
+</header>
+
+<div class="albums-container">
+  <div class="albums-content animate__animated animate__fadeInUp">
+    <h1 class="section-title">منتجاتنا</h1>
+
+    <div class="album-slider">
+      <div class="album-header">
+        <h2 class="album-title">ثلاجات الباب الواحد</h2>
+      </div>
+      
+      <div class="slideshow-container" id="slider2">
+        <div class="slide active">
+          <img src="{{ url_for('static', filename='images/products/single/Untitled-1-02-09.jpg') }}" alt="ثلاجة الباب الواحد" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/single/Untitled-1-02-11.jpg') }}" alt="ثلاجة الباب الواحد" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/single/Untitled-1-02-12.jpg') }}" alt="ثلاجة الباب الواحد" loading="lazy">
+        </div>
+      </div>
+      
+      <div class="album-controls">
+        <button class="control-btn prev-btn" onclick="prevSlide('slider2')" aria-label="الشريحة السابقة">التالي</button>
+        <button class="control-btn next-btn" onclick="nextSlide('slider2')" aria-label="الشريحة التالية">السابق</button>
+      </div>
+      
+      <div class="album-dots" id="dots2">
+        <div class="dot active" onclick="goToSlide('slider2', 0)" aria-label="الشريحة 1"></div>
+        <div class="dot" onclick="goToSlide('slider2', 1)" aria-label="الشريحة 2"></div>
+        <div class="dot" onclick="goToSlide('slider2', 2)" aria-label="الشريحة 3"></div>
+      </div>
+    </div>
+
+    <div class="album-slider">
+      <div class="album-header">
+        <h2 class="album-title">ثلاجات البابين</h2>
+      </div>
+      
+      <div class="slideshow-container" id="slider3">
+        <div class="slide active">
+          <img src="{{ url_for('static', filename='images/products/double/Untitled-1-02-13.jpg') }}" alt="ثلاجة البابين" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/double/Untitled-1-02-14.jpg') }}" alt="ثلاجة البابين" loading="lazy">
+        </div>
+      </div>
+      
+      <div class="album-controls">
+        <button class="control-btn prev-btn" onclick="prevSlide('slider3')" aria-label="الشريحة السابقة">التالي</button>
+        <button class="control-btn next-btn" onclick="nextSlide('slider3')" aria-label="الشريحة التالية">السابق</button>
+      </div>
+      
+      <div class="album-dots" id="dots3">
+        <div class="dot active" onclick="goToSlide('slider3', 0)" aria-label="الشريحة 1"></div>
+        <div class="dot" onclick="goToSlide('slider3', 1)" aria-label="الشريحة 2"></div>
+      </div>
+    </div>
+    <div class="album-slider">
+      <div class="album-header">
+        <h2 class="album-title">ثلاجات الأبواب المفتوحة</h2>
+      </div>
+      
+      <div class="slideshow-container" id="slider1">
+        <div class="slide active">
+          <img src="{{ url_for('static', filename='images/products/open/Untitled-1-02-15.jpg') }}" alt="ثلاجة أبواب مفتوحة" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/open/Untitled-1-02-16.jpg') }}" alt="ثلاجة أبواب مفتوحة" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/open/Untitled-1-02-18.jpg') }}" alt="ثلاجة أبواب مفتوحة" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/open/Untitled-1-02-27.jpg') }}" alt="ثلاجة أبواب مفتوحة" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/open/Untitled-1-02-29.jpg') }}" alt="ثلاجة أبواب مفتوحة" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/open/Untitled-1-02-30.jpg') }}" alt="ثلاجة أبواب مفتوحة" loading="lazy">
+        </div>
+      </div>
+      <div class="album-controls">
+        <button class="control-btn prev-btn" onclick="prevSlide('slider1')" aria-label="الشريحة السابقة">التالي</button>
+        <button class="control-btn next-btn" onclick="nextSlide('slider1')" aria-label="الشريحة التالية">السابق</button>
+      </div>
+      
+      <div class="album-dots" id="dots1">
+        <div class="dot active" onclick="goToSlide('slider1', 0)" aria-label="الشريحة 1"></div>
+        <div class="dot" onclick="goToSlide('slider1', 1)" aria-label="الشريحة 2"></div>
+        <div class="dot" onclick="goToSlide('slider1', 2)" aria-label="الشريحة 3"></div>
+        <div class="dot" onclick="goToSlide('slider1', 3)" aria-label="الشريحة 4"></div>
+        <div class="dot" onclick="goToSlide('slider1', 4)" aria-label="الشريحة 5"></div>
+        <div class="dot" onclick="goToSlide('slider1', 5)" aria-label="الشريحة 6"></div>
+      </div>
+    </div>
+
+    <div class="album-slider">
+      <div class="album-header">
+        <h2 class="album-title">المجمدات</h2>
+      </div>
+      
+      <div class="slideshow-container" id="slider4">
+        <div class="slide active">
+          <img src="{{ url_for('static', filename='images/products/freezer/Untitled-1-02-23.jpg') }}" alt="مجمد" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/freezer/Untitled-1-02-24.jpg') }}" alt="مجمد" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/freezer/Untitled-1-02-26.jpg') }}" alt="مجمد" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/freezer/Untitled-1-02-31.jpg') }}" alt="مجمد" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/freezer/Untitled-1-02-21.jpg') }}" alt="مجمد" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/freezer/Untitled-1-02-22.jpg') }}" alt="مجمد" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/freezer/Untitled-1-02-28.jpg') }}" alt="مجمد" loading="lazy">
+        </div>
+      </div>
+      
+      <div class="album-controls">
+        <button class="control-btn prev-btn" onclick="prevSlide('slider4')" aria-label="الشريحة السابقة">التالي</button>
+        <button class="control-btn next-btn" onclick="nextSlide('slider4')" aria-label="الشريحة التالية">السابق</button>
+      </div>
+      
+      <div class="album-dots" id="dots4">
+        <div class="dot active" onclick="goToSlide('slider4', 0)" aria-label="الشريحة 1"></div>
+        <div class="dot" onclick="goToSlide('slider4', 1)" aria-label="الشريحة 2"></div>
+        <div class="dot" onclick="goToSlide('slider4', 2)" aria-label="الشريحة 3"></div>
+        <div class="dot" onclick="goToSlide('slider4', 3)" aria-label="الشريحة 4"></div>
+        <div class="dot" onclick="goToSlide('slider4', 4)" aria-label="الشريحة 5"></div>
+        <div class="dot" onclick="goToSlide('slider4', 5)" aria-label="الشريحة 6"></div>
+        <div class="dot" onclick="goToSlide('slider4', 6)" aria-label="الشريحة 7"></div>
+      </div>
+    </div>
+
+    <div class="album-slider">
+      <div class="album-header">
+        <h2 class="album-title">الثلاجات الخاصة</h2>
+      </div>
+      
+      <div class="slideshow-container" id="slider5">
+        <div class="slide active">
+          <img src="{{ url_for('static', filename='images/products/special/Untitled-1-02-19.jpg') }}" alt="ثلاجة خاصة" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/special/Untitled-1-02-20.jpg') }}" alt="ثلاجة خاصة" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/special/Untitled-1-02-04.jpg') }}" alt="ثلاجة خاصة" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/special/Untitled-1-02-03.jpg') }}" alt="ثلاجة خاصة" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/special/Untitled-1-02-32.jpg') }}" alt="ثلاجة خاصة" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/special/Untitled-1-02-02.jpg') }}" alt="ثلاجة خاصة" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/special/Untitled-1-02-01.jpg') }}" alt="ثلاجة خاصة" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/special/Untitled-1-02-08.jpg') }}" alt="ثلاجة خاصة" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/special/Untitled-1-02-10.jpg') }}" alt="ثلاجة خاصة" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/special/Untitled-1-02-05.jpg') }}" alt="ثلاجة خاصة" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/special/Untitled-1-02-06.jpg') }}" alt="ثلاجة خاصة" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/special/Untitled-1-02-07.jpg') }}" alt="ثلاجة خاصة" loading="lazy">
+        </div>
+      </div>
+      
+      <div class="album-controls">
+        <button class="control-btn prev-btn" onclick="prevSlide('slider5')" aria-label="الشريحة السابقة">التالي</button>
+        <button class="control-btn next-btn" onclick="nextSlide('slider5')" aria-label="الشريحة التالية">السابق</button>
+      </div>
+      
+      <div class="album-dots" id="dots5">
+        <div class="dot active" onclick="goToSlide('slider5', 0)" aria-label="الشريحة 1"></div>
+        <div class="dot" onclick="goToSlide('slider5', 1)" aria-label="الشريحة 2"></div>
+        <div class="dot" onclick="goToSlide('slider5', 2)" aria-label="الشريحة 3"></div>
+        <div class="dot" onclick="goToSlide('slider5', 3)" aria-label="الشريحة 4"></div>
+        <div class="dot" onclick="goToSlide('slider5', 4)" aria-label="الشريحة 5"></div>
+        <div class="dot" onclick="goToSlide('slider5', 5)" aria-label="الشريحة 6"></div>
+        <div class="dot" onclick="goToSlide('slider5', 6)" aria-label="الشريحة 7"></div>
+        <div class="dot" onclick="goToSlide('slider5', 7)" aria-label="الشريحة 8"></div>
+        <div class="dot" onclick="goToSlide('slider5', 8)" aria-label="الشريحة 9"></div>
+        <div class="dot" onclick="goToSlide('slider5', 9)" aria-label="الشريحة 10"></div>
+        <div class="dot" onclick="goToSlide('slider5', 10)" aria-label="الشريحة 11"></div>
+        <div class="dot" onclick="goToSlide('slider5', 11)" aria-label="الشريحة 12"></div>
+      </div>
+    </div>
+    <div class="album-slider">
+      <div class="album-header">
+        <h2 class="album-title">Post Mix Machine</h2>
+      </div>
+      
+      <div class="slideshow-container" id="slider7">
+        <div class="slide active">
+          <img src="{{ url_for('static', filename='images/products/postmix/Catalogue-Post Mix Soda Fountain Dispenser_2025-01.jpg') }}" alt="Post Mix Machine" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/postmix/Catalogue-Post Mix Soda Fountain Dispenser_2025-02.jpg') }}" alt="Post Mix Machine" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/postmix/Catalogue-Post Mix Soda Fountain Dispenser_2025-03.jpg') }}" alt="Post Mix Machine" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/postmix/Catalogue-Post Mix Soda Fountain Dispenser_2025-04.jpg') }}" alt="Post Mix Machine" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/postmix/Catalogue-Post Mix Soda Fountain Dispenser_2025-05.jpg') }}" alt="Post Mix Machine" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/postmix/Catalogue-Post Mix Soda Fountain Dispenser_2025-06.jpg') }}" alt="Post Mix Machine" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/postmix/Catalogue-Post Mix Soda Fountain Dispenser_2025-07.jpg') }}" alt="Post Mix Machine" loading="lazy">
+        </div>
+        <div class="slide">
+          <img src="{{ url_for('static', filename='images/products/postmix/Catalogue-Post Mix Soda Fountain Dispenser_2025-08.jpg') }}" alt="Post Mix Machine" loading="lazy">
+        </div>
+      </div>
+      
+      <div class="album-controls">
+        <button class="control-btn prev-btn" onclick="prevSlide('slider7')" aria-label="Previous Slide">التالي</button>
+        <button class="control-btn next-btn" onclick="nextSlide('slider7')" aria-label="Next Slide">السابق</button>
+      </div>
+      
+      <div class="album-dots" id="dots4">
+        <div class="dot active" onclick="goToSlide('slider7', 0)" aria-label="Slide 1"></div>
+        <div class="dot" onclick="goToSlide('slider7', 1)" aria-label="Slide 2"></div>
+        <div class="dot" onclick="goToSlide('slider7', 2)" aria-label="Slide 3"></div>
+        <div class="dot" onclick="goToSlide('slider7', 3)" aria-label="Slide 4"></div>
+        <div class="dot" onclick="goToSlide('slider7', 4)" aria-label="Slide 5"></div>
+        <div class="dot" onclick="goToSlide('slider7', 5)" aria-label="Slide 6"></div>
+        <div class="dot" onclick="goToSlide('slider7', 6)" aria-label="Slide 7"></div>
+        <div class="dot" onclick="goToSlide('slider7', 7)" aria-label="Slide 8"></div>
+
+      </div>
+    </div>
+    
+    <div class="album-slider">
+      <div class="album-header">
+        <h2 class="album-title">البوم جديد</h2>
+      </div>
+      
+      <div class="slideshow-container" id="slider6">
+        {% for i in range(1, 83) %}
+        <div class="slide{% if i == 1 %} active{% endif %}">
+          <img src="{{ url_for('static', filename='images/products/items/' ~ i ~ '.jpg') }}" alt="New Product {{ i }}" loading="lazy">
+        </div>
+        {% endfor %}
+      </div>
+      
+      <div class="album-controls">
+        <button class="control-btn prev-btn" onclick="prevSlide('slider6')" aria-label="الشريحة السابقة">التالي</button>
+        <button class="control-btn next-btn" onclick="nextSlide('slider6')" aria-label="الشريحة التالية">السابق</button>
+      </div>
+      
+      <div class="album-dots" id="dots6">
+        {% for i in range(83) %}
+        <div class="dot{% if i == 0 %} active{% endif %}" onclick="goToSlide('slider6', { i })" aria-label="Slide {{ i + 1 }}"></div>
+        {% endfor %}
+      </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/products_ar.js') }}"></script>
+
+</body>
+</html>

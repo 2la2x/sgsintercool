@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>خطوات لمعدات التبريد</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index_ar.css') }}">
+</head>
+<body>
+
+<div class="floating-element"></div>
+<div class="floating-element"></div>
+<div class="floating-element"></div>
+
+<header id="mainHeader">
+  <nav>
+    <a href="{{ url_for('index', lang='ar') }}" class="logo">
+      <img src="{{ url_for('static', filename='/images/logos/logo02-01.png') }}" alt="شعار خطوات لمعدات التبريد" />
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="{{ url_for('about', lang=lang) }}">من نحن</a></li>
+      <li><a href="{{ url_for('services', lang=lang) }}">الخدمات</a></li>
+      <li><a href="{{ url_for('products', lang=lang) }}">المنتجات</a></li>
+      <li><a href="{{ url_for('media', lang=lang) }}">الشركاء</a></li>
+      <li><a href="{{ url_for('career', lang=lang) }}">الوظائف</a></li>
+      <li><a href="{{ url_for('contact', lang=lang) }}">للتواصل</a></li>
+    </ul>
+    
+    <div class="language-switcher">
+      <select id="langSelect" data-base-url="{{ url_for('switch_lang', lang='_LANG_') }}">
+        <option value="ar" {% if lang == 'ar' %}selected{% endif %}>العربية</option>
+        <option value="en" {% if lang == 'en' %}selected{% endif %}>English</option>
+      </select>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1 class="animate__animated animate__fadeIn"> شركة خطوات لتجهيزات التبريد والتجارة(ذ.م.م)</h1>
+  <div class="buttons">
+    <a href="{{ url_for('about', lang=lang) }}" class="btn animate__animated animate__fadeInUp"><i class="fas fa-info-circle"></i> من نحن</a>
+    <a href="{{ url_for('services', lang=lang) }}" class="btn animate__animated animate__fadeInUp animate__delay-1s"><i class="fas fa-screwdriver-wrench"></i> الخدمات</a>
+    <a href="{{ url_for('products', lang=lang) }}" class="btn animate__animated animate__fadeInUp animate__delay-2s"><i class="fas fa-box-archive"></i> المنتجات</a>
+    <a href="{{ url_for('media', lang=lang) }}" class="btn animate__animated animate__fadeInUp animate__delay-3s"><i class="fas fa-handshake"></i> الشركاء</a>
+    <a href="{{ url_for('career', lang=lang) }}" class="btn animate__animated animate__fadeInUp animate__delay-4s"><i class="fas fa-briefcase"></i> الوظائف</a>
+    <a href="{{ url_for('contact', lang=lang) }}" class="btn animate__animated animate__fadeInUp animate__delay-5s"><i class="fas fa-envelope"></i>للتواصل</a>
+  </div>
+</section>
+
+<section class="features-section">
+  <h2 class="section-title">لماذا تختارنا</h2>
+  <div class="features-grid">
+    <div class="feature-card">
+      <i class="fas fa-shield-alt"></i>
+      <h3>ضمان الجودة</h3>
+      
+        ثلاجات عرض وفاونتن ماشين احترافية لمشروعك التجاري 
+      تقدم شركة خطوات لتجهيزات التبريد والتجارة حلول التبريد التجارية المصممة خصيصاً للمحلات التجارية والمطاعم والمقاهي
+        مميزات منتجاتنا :
+        <li> تبريد سريع وفعال يحافظ على جودة المنتجات . </li>
+        <li> تصميمات عصرية تناسب مختلف المساحات . </li>
+        <li> توفير طاقة يصل إلى 50% مقارنة بالأنواع التقليدية . </li>
+        <li> سهولة الصيانة مع قطع غيار متوفرة دائماً . </li>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-clock"></i>
+      <h3>دعم فني متاح 24 ساعة
+    </h3>
+      
+        في  شركة خطوات لتجهيزات التبريد والتجارة، نقدم لك خدمة دعم فني متكاملة على مدار الساعة لضمان استمرارية عملك دون انقطاع:
+        
+        <li> طاقم فني متخصص جاهز للرد على استفساراتك . </li>
+        <li>صيانة طارئة خلال 4 ساعات كحد أقصى . </li>
+            <li>متابعة دورية لضمان الأداء الأمثل . </li> 
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-tools"></i>
+      <h3>خدمة التركيب الاحترافي بمستوى عالمي</h3>
+      
+        في  شركة خطوات لتجهيزات التبريد والتجارة، نقدم خدمة تركيب متكاملة تُنفذ بأعلى معايير الجودة:
+        
+       <li> فنيون معتمدون ذوو خبرة طويلة . </li>
+       <li> أدوات ومعدات متخصصة للتركيب الأمثل . </li>
+       <li> فحص شامل بعد التركيب . </li>
+       <li> ضمان خدمة التركيب لمدة عام كامل . </li>
+            
+    </div>
+  </div>
+</section>
+
+<section class="services-section">
+  <h2 class="section-title">خدماتنا</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <img src="{{ url_for('static', filename='images/services/maintenance.jpg') }}" alt="خدمة الصيانة">
+      <h3>أفضل خدمة صيانة لثلاجات العرض والفاونتن الماشين</h3>
+      
+  <p>صيانة دورية,إصلاحات طارئة, قطع غيار أصلية, فنيون معتمدون, خدمة 24/7, اتصل الآن لضمان استمرارية عملك. </p>
+    </div>
+    <div class="service-card">
+      <img src="{{ url_for('static', filename='images/services/transportation.jpg') }}" alt="خدمة النقل">
+      <h3>خدمة نقل آمنة لثلاجات العرض والفوانتين الماشين</h3>
+      <p> نقل معدات التبريد, فنيون متخصصون, معدات حديثة, تأمين كامل,  خدمة 24/7,اتصل الآن لنقل آمن بدون أعطال.</p>
+    </div>
+    <div class="service-card">
+      <img src="{{ url_for('static', filename='images/services/refurbishment.jpg') }}" alt="خدمة التجديد">
+      <h3>تحديث وتجديد ثلاجات العرض والفوانتين الماشين - إعادة الحياة لمعداتك القديمة!</h3>
+      <p>تجديد كامل, تحديث تقني, تحسين كفاءة, توفير الطاقة, ضمان على الأعمال, جدد معداتك القديمة ووفر 50% من ثمن الجهاز الجديد.
+    </p>
+    </div>
+    <div class="service-card">
+      <img src="{{ url_for('static', filename='images/services/storage.jpg') }}" alt="خدمة التخزين">
+      <h3>خدمة تخزين احترافية لثلاجات العرض والفوانتين الماشين</h3>
+      <p> تخزين آمن , مراقبة دورية , حماية من العوامل الجوية , تأمين كامل , مساحات متنوعة, احجز مساحة تخزينك الآن وحافظ على معداتك بأفضل حال.
+
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="stats-section">
+  <h2 class="section-title"></h2>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <i class="fas fa-user-cog stat-tech"></i>
+      <div class="stat-number">150+</div>
+      <div class="stat-label">أعضاء الفريق الخبراء</div>
+    </div>
+    <div class="stat-card">
+      <i class="fas fa-award stat-tech"></i>
+      <div class="stat-number">25+</div>
+      <div class="stat-label">سنوات الخبرة</div>
+    </div>
+    <div class="stat-card">
+      <i class="fas fa-earth-americas rotating-globe"></i>
+      <div class="stat-label">نعمل في</div>
+      <div class="countries-list">
+        الأردن • السعودية<br>الإمارات • عمان <br>العراق•
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-separator">
+  <div class="separator-content">
+    <div class="separator-icon">
+      <i class="fas fa-snowflake"></i>
+    </div>
+    <div class="separator-icon">
+      <i class="fas fa-fan"></i>
+    </div>
+    <div class="separator-icon">
+      <i class="fas fa-temperature-low"></i>
+    </div>
+  </div>
+</div>
+
+<section class="contact-section">
+  <h2 class="section-title">تواصل معنا</h2>
+  <div class="contact-container">
+    <div class="contact-info">
+      <div class="contact-card">
+        <h3><i class="fas fa-fax"></i> فاكس</h3>
+        <p>أرسل لنا فاكس:</p>
+        <a href="tel:+962(6)4741402" class="phone-number">
+          <i class="fas fa-fax"></i>
+          +962 (6) 474 1402
+        </a>
+      </div>
+
+      <div class="contact-card">
+        <h3><i class="fas fa-phone-alt"></i> هاتف</h3>
+        <p>اتصل بنا مباشرة:</p>
+        <a href="tel:+962(6)4741440" class="phone-number">
+          <i class="fas fa-phone"></i>
+          +962 (6) 474 1440
+        </a>
+      </div>
+
+      <div class="contact-card">
+        <h3><i class="fas fa-envelope"></i> بريد إلكتروني</h3>
+        <p>أرسل لنا بريدًا إلكترونيًا:</p>
+        <a href="mailto:info@sgsintercool.com" class="phone-number">
+          <i class="fas fa-envelope"></i>
+          info@sgsintercool.com
+        </a>
+      </div>
+    </div>
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3384.2982257015584!2d35.8663393!3d31.9981457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca1dc57e8e9d7%3A0x51e33e82c487296e!2sKhalda%2C%20Amman!5e0!3m2!1sar!2sjo!4v1709655774961!5m2!1sar!2sjo"
+        allowfullscreen="" 
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<div class="address-bar">
+  <p><i class="fas fa-map-marker-alt"></i> خلدا، ص.ب: 1051 عمان 11953 الأردن</p>
+</div>
+
+
+<script src="{{ url_for('static', filename='js/index_ar.js') }}"></script>
+</body>
+</html>

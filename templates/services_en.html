@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SERVICES - STEPS EQUIPMENT & REFRIGERATION</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/services_en.css') }}">
+</head>
+<body>
+
+<div class="floating-element"></div>
+<div class="floating-element"></div>
+<div class="floating-element"></div>
+
+<header id="mainHeader">
+  <nav>
+    <a href="{{ url_for('index', lang='en') }}" class="logo">
+      <img src="{{ url_for('static', filename='images/logos/Logo02-01.png') }}" alt="Steps Equipment Logo" />
+    </a>
+    
+    <ul class="nav-links">
+      <li><a href="{{ url_for('about', lang=lang) }}">About Us</a></li>
+      <li><a href="{{ url_for('services', lang=lang) }}" class="active">Services</a></li>
+      <li><a href="{{ url_for('products', lang=lang) }}">Products</a></li>
+      <li><a href="{{ url_for('media', lang=lang) }}">Partners</a></li>
+      <li><a href="{{ url_for('career', lang=lang) }}">Career</a></li>
+      <li><a href="{{ url_for('contact', lang=lang) }}">Contact Us</a></li>
+    </ul>
+    <div class="language-switcher">
+      <select id="langSelect" data-base-url="{{ url_for('switch_lang', lang='_LANG_') }}">
+        <option value="en" {% if lang == 'en' %}selected{% endif %}>English</option>
+        <option value="ar" {% if lang == 'ar' %}selected{% endif %}>العربية</option>
+      </select>
+    </div>
+  </nav>
+</header>
+
+<div class="services-container">
+  <div class="services-content animate__animated animate__fadeInUp">
+    <h1 class="section-title">OUR SERVICES</h1>
+    
+    <div class="intro-text">
+      <p>We Provide A Full Range Of  cooling Services, Including Installation, Maintenance, And Repair Of Cooling Systems Our Certified Technicians Ensure Efficiency And Reliability In Every Job.      </p>
+    </div>
+
+    <div class="services-boxes">
+      <!-- Maintenance Service -->
+      <div class="service-box animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
+        <div class="service-image">
+          <img src="{{ url_for('static', filename='images/services/maintenance.jpg') }}" alt="Maintenance Service" loading="lazy">
+        </div>
+        <div class="service-content">
+          <h2>Maintenance</h2>
+          <ul>
+            <li>Managing Maintenance Requests On A Daily Basis To Serve Our Clients In The Shortest Time Depending On Their Requirements.</li>      
+            <li>Record Repairing Details Including Spare Parts And Repair Actions.</li>
+            <li>Sign The Work Order From The Customer After Finalizing The Maintenance Job.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Transportation Service -->
+      <div class="service-box animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
+        <div class="service-image">
+          <img src="{{ url_for('static', filename='images/services/transportation.jpg') }}" alt="Transportation Service" loading="lazy">
+        </div>
+        <div class="service-content">
+          <h2>Transportation</h2>
+          <ul>
+            1. Accurate Delivery And Installation:
+            <li>Equipment Delivered On Time And In Perfect Condition.</li>
+            <li>Quick And Accurate Installation By A Specialized Technical Team.</li>
+            <li>Custom Refrigeration Equipment Designed To Suit Your Needs.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="service-box animate__animated animate__fadeInUp" style="animation-delay: 0.6s">
+        <div class="service-image">
+          <img src="{{ url_for('static', filename='images/services/refurbishment.jpg') }}" alt="Refurbishment Service" loading="lazy">
+        </div>
+        <div class="service-content">
+          <h2>Refurbishment</h2>
+          <ul>
+            Refurbishment Services Include:
+            <li>Washing The Coolers From Inside And Outside.</li>
+            <li>Paint The External Body As Per Our Technician Assessment.</li>
+            <li>Check The Cooling Performance And Replace Any Defective Parts.</li>
+            <li>Inspect Accessories Quality And Replace Any Broken Parts.</li>
+            <li>Pack The Cooler Using A Wrapping Stretch Film.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Storage Service -->
+      <div class="service-box animate__animated animate__fadeInUp" style="animation-delay: 0.8s">
+        <div class="service-image">
+          <img src="{{ url_for('static', filename='images/services/storage.jpg') }}" alt="Storage Service" loading="lazy">
+        </div>
+        <div class="service-content">
+          <h2>Storage</h2>
+          <ul> 
+            Importation Of High Quality Cooling Equipment:
+            <li>We Source And Import Cooling Equipment From Trusted Global Manufactures.</li>
+            <li>Our Equipment Is Designed To Meet The Highest Industry Standards.</li>
+            <li>Ensuring Durability And Reliability For Demanding Environment.</li>
+            Secure Storage Solutions:
+            <li>Built To Rigorous Safety Standards.</li>
+            <li>Our Facilities Are Equipped With Advanced Security And Control Systems.</li>
+            <li>Protecting Your Investment With State-Of-The-Art Monitoring.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/services_en.js') }}"></script>
+</body>
+</html>

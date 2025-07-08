@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>من نحن - ستيبس للمعدات والتبريد</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about_ar.css') }}">
+</head>
+<body>
+
+<div class="floating-element"></div>
+<div class="floating-element"></div>
+<div class="floating-element"></div>
+
+<header id="mainHeader">
+  <nav>
+    <a href="{{ url_for('index', lang='ar') }}" class="logo">
+      <img src="{{ url_for('static', filename='images/logos/logo02-01.png') }}" alt="شعار خطوات لمعدات التبريد" />
+    </a>
+    
+    <ul class="nav-links">
+      <li><a href="{{ url_for('about', lang=lang) }}" class="active">من نحن</a></li>
+      <li><a href="{{ url_for('services', lang=lang) }}">الخدمات</a></li>
+      <li><a href="{{ url_for('products', lang=lang) }}">المنتجات</a></li>
+      <li><a href="{{ url_for('media', lang=lang) }}">الشركاء</a></li>
+      <li><a href="{{ url_for('career', lang=lang) }}">الوظائف</a></li>
+      <li><a href="{{ url_for('contact', lang=lang) }}">للتواصل</a></li>
+    </ul>
+    
+    <div class="language-switcher">
+      <select id="langSelect" data-base-url="{{ url_for('switch_lang', lang='_LANG_') }}">
+        <option value="ar" {% if lang == 'ar' %}selected{% endif %}>العربية</option>
+        <option value="en" {% if lang == 'en' %}selected{% endif %}>English</option>
+      </select>
+    </div>
+  </nav>
+</header>
+
+<div class="about-container">
+  <div class="about-content animate__animated animate__fadeInUp">
+    <h1 class="section-title">من نحن</h1>
+    
+    <div class="about-text">
+      <ul><p>شركة خطوات لتجهيزات التبريد والتجارة - الخيار الأمثل لحلول التبريد التجارية
+    ثلاجات تجارية , صيانة متكاملة , حلول مخصصة 
+     اكتشف لماذا نعتبر الشركة الرائدة في مجال التبريد والتكييف التجاري منذ 25 سنة .
+  </p></ul>
+    </div>
+
+    <div class="info-section animate__animated animate__fadeInUp">
+      <h2 class="section-title">ما نقدمه</h2>
+      
+      <div class="info-boxes">
+        <div class="info-box" style="animation-delay: 0.2s">
+          <i class="fas fa-bullseye"></i>
+          <h3>مهمتنا</h3>
+          <p>
+            <ul>
+            <li>إدارة أصول</li>
+          <li>  تخزين احترافي  </li>
+          <li> نشر معدات </li>
+          <li>صيانة سريعة </li>
+           <li> تجديد </li>
+           <li>نضمن لك إدارة متكاملة لمعدات التبريد وفق أعلى المعايير </li>
+            </ul>
+          </p>
+          
+        </div>
+        
+        <div class="info-box" style="animation-delay: 0.4s">
+          <i class="fas fa-eye"></i>
+          <h3>رؤيتنا</h3>
+          <p><ul><li> تنمية بشرية </li>
+            <li> قيم راسخة </li>
+            <li> فرق عمل متميزة</li>
+            <li> خدمة عملاء استثنائية. نصنع الفارق من خلال استثمارنا في مواهبنا وابتكاراتنا</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>  
+    
+    <div class="download-section animate__animated animate__fadeInUp">
+      <h2>الملف التعريفي للشركة</h2>
+      <p>لمزيد من المعلومات التفصيلية عن شركتنا وتاريخنا وإمكانياتنا وإنجازاتنا.</p>
+      <a href="{{ url_for('static', filename='files/steps profile 2025 pdf.pdf') }}" download class="download-btn">
+        <i class="fas fa-download"></i> تحميل الملف التعريفي
+      </a>
+    </div>
+    
+    <div class="logos-section animate__animated animate__fadeInUp">
+      <h2 class="section-title">شركاؤنا</h2>
+      <div class="logos-container">
+        <div class="top-logo main-logo">
+          <img src="{{ url_for('static', filename='images/logos/logo02-01.png') }}" alt="الشركة الأم" />
+        </div>
+        <div class="bottom-logos">
+          <div class="logo-box">
+            <img src="{{ url_for('static', filename='images/logos/sdasdas-04.png') }}" alt="الشركة الشقيقة 1" />
+          </div>
+          <div class="logo-box">
+            <img src="{{ url_for('static', filename='images/logos/sgsintercool.png') }}" alt="الشركة الشقيقة 2" />
+          </div>
+          <div class="logo-box">
+            <img src="{{ url_for('static', filename='images/logos/darkline.png') }}" alt="الشركة الشقيقة 3" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="{{ url_for('static', filename='js/about_ar.js') }}"></script>
+</body>
+</html>

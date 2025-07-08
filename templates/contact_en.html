@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CONTACT US - STEPS EQUIPMENT & REFRIGERATION</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact_en.css') }}">
+</head>
+<body>
+
+<div class="floating-element"></div>
+<div class="floating-element"></div>
+<div class="floating-element"></div>
+
+<header id="mainHeader">
+  <nav>
+    <a href="{{ url_for('index', lang='en') }}" class="logo">
+      <img src="{{ url_for('static', filename='images/logos/Logo02-01.png') }}" alt="Steps Equipment & Refrigeration Logo" />
+    </a>
+    
+    <ul class="nav-links">
+      <li><a href="{{ url_for('about', lang=lang) }}">About Us</a></li>
+      <li><a href="{{ url_for('services', lang=lang) }}">Services</a></li>
+      <li><a href="{{ url_for('products', lang=lang) }}">Products</a></li>
+      <li><a href="{{ url_for('media', lang=lang) }}">Partners</a></li>
+      <li><a href="{{ url_for('career', lang=lang) }}">Career</a></li>
+      <li><a href="{{ url_for('contact', lang=lang) }}" class="active">Contact Us</a></li>
+    </ul>
+    
+    <div class="language-switcher">
+      <select id="langSelect" data-base-url="{{ url_for('switch_lang', lang='_LANG_') }}">
+        <option value="en" {% if lang == 'en' %}selected{% endif %}>English</option>
+        <option value="ar" {% if lang == 'ar' %}selected{% endif %}>العربية</option>
+      </select>
+    </div>
+  </nav>
+</header>
+
+<div class="contact-container">
+  <div class="contact-content animate__animated animate__fadeInUp">
+    <h1 class="section-title">CONTACT US</h1>
+    
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fas fa-phone"></i>
+        </div>
+        <h3>Phone</h3>
+        <div class="contact-info">
+          <p>Available During Business Hours</p>
+          <a href="tel:+96264741440" class="contact-link">+962 6 474 1440</a>
+        </div>
+      </div>
+      
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fas fa-fax"></i>
+        </div>
+        <h3>Fax</h3>
+        <div class="contact-info">
+          <p>Send Us Documents</p>
+          <span class="contact-link">+962 6 474 1402</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="email-social-row">
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h3>Email</h3>
+        <div class="contact-info">
+          <p>For General Inquiries</p>
+          <a href="mailto:info@sgsintercool.com" class="contact-link">info@sgsintercool.com</a>
+        </div>
+      </div>
+      
+      <div class="contact-card social-media-card">
+        <div class="contact-icon">
+          <i class="fas fa-share-alt"></i>
+        </div>
+        <h3>Social Media</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com/share/1Ad6L4hoL5/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/steps-for-cooling-equipment-trade-co/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="linkedin">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.instagram.com/steps_scet?igsh=MXZoMnJscDN3bHY4aw" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <h2 class="section-title">OUR LOCATION</h2>
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3384.2982257015584!2d35.8663393!3d31.9981457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca1dc57e8e9d7%3A0x51e33e82c487296e!2sKhalda%2C%20Amman!5e0!3m2!1sen!2sjo!4v1709655774961!5m2!1sen!2sjo"
+        allowfullscreen="" 
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/contact_en.js') }}"></script>
+
+</body>
+</html>
