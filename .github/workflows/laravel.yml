@@ -1,0 +1,46 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MainController;
+
+Route::middleware(['web', 'language'])->group(function () {
+    // Redirects without language
+    Route::redirect('/about', '/ar/about');
+    Route::redirect('/services', '/ar/services');
+    Route::redirect('/products', '/ar/products');
+    Route::redirect('/media', '/ar/media');
+    Route::redirect('/career', '/ar/career');
+    Route::redirect('/contact', '/ar/contact');
+
+    // Language routes
+    Route::get('/', [MainController::class, 'index'])->name('index');
+    Route::get('/{lang}', [MainController::class, 'index']);
+    
+    Route::get('/{lang}/about', [MainController::class, 'about'])->name('about');
+    Route::get('/{lang}/services', [MainController::class, 'services'])->name('services');
+    Route::get('/{lang}/products', [MainController::class, 'products'])->name('products');
+    Route::get('/{lang}/media', [MainController::class, 'media'])->name('media');
+    Route::get('/{lang}/career', [MainController::class, 'career'])->name('career');
+    Route::get('/{lang}/contact', [MainController::class, 'contact'])->name('contact');
+
+    // Language switcher
+    Route::get('/switch_lang/{lang}', [MainController::class, 'switchLang']);
+
+    // Static files
+    Route::get('/static/{filename}', function ($filename) {
+        $path = public_path('static/' . $filename);
+        if (!file_exists($path)) {
+            abort(404);
+        }
+        return response()->file($path);
+    });
+
+    // Application submission
+    Route::post('/submit_application', [MainController::class, 'submitApplication']);
+});
+
+// Fallback for 404
+Route::fallback(function () {
+    $lang = App::getLocale();
+    return response()->view("404_$lang", [], 404);
+});
